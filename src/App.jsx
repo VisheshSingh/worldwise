@@ -11,6 +11,7 @@ import AppLayout from './pages/AppLayout';
 
 import CityList from './components/CityList';
 import CountryList from './components/CountryList';
+import City from './components/City';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -47,6 +48,7 @@ function App() {
             path='cities'
             element={<CityList isLoading={isLoading} cities={cities} />}
           />
+          <Route path='cities/:id' element={<City />} />
           <Route
             path='countries'
             element={<CountryList isLoading={isLoading} cities={cities} />}
